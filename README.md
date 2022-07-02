@@ -11,7 +11,33 @@ The WHO has been collecting data on COVID-19 since December 2019.  Data includes
 
  - What is the death rate by country
  - What is the vaccination rate by country
- - What vaccination was used the most
+ - What country had the highest number of vaccination types
+ - What country had the fewest number of vaccination types
+ - What was the death rate pre-vaccination by country
+ - What was the death rate post-vaccination by country
+ 
+ Datafile includes the following fields:
+ 
+  - Date Reported
+  - Country Code
+  - Country
+  - WHO Region
+  - New Cases
+  - Cumulative Cases
+  - New Deaths
+  - Cumulative Deaths
+  - Vax Type Count
+  - Vax Rate
+  - First Vax Date
+
+Data was scrubbed as follows:
+
+ - A new field was defined for Vax Type Count.  Instead of having all vaccine options, it was grouped by vaccines < 4 and vaccines >= 4
+ - columns not needed for analysis were removed such as WHO Region, Country Code and Vax Type Count 
+ - some columns changed names so it was more user friendly
+ - created new columns for if the report date was pre or post vaccination release so we could also track the death rate pre and post vaccination
+
+
 
 QNT755 Project Overview
 
